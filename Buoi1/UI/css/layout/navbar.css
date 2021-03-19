@@ -1,0 +1,76 @@
+#navbar {
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid #dedede;
+}
+
+
+.logo-box {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+    .logo-box .sidebar {
+        width: 40px;
+        height: 30px;
+        background-image: url('../../img/toggle.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+.sidebar {}
+
+    .logo-box .logo {
+        width: 200px;
+        height: 40px;
+        background-image: url('../../img/cukcuk-logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+
+.navbar-box .navbar-item {
+    display: flex;
+    height: 44px;
+    align-items: center;
+}
+
+    .navbar-box .navbar-item:hover {
+        background-color: #019160;
+        cursor: pointer;
+    }
+
+.navbar-box .navbar-icon {
+    margin-left: 16px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar-box .navbar-text {
+    margin-left: 10px;
+}
+
+.icon-dashboard {
+    background-image: url('../../icon/dashboard.png');
+}
+
+.icon-report {
+    background-image: url('../../icon/report.png');
+}
+
+.icon-employee {
+    background-image: url('../../icon/dic-employee.png');
+}
+
+.icon-setting {
+    background-image: url('../../icon/setting.png');
+}

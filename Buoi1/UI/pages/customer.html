@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/components/button.css" rel="stylesheet" />
+    <link href="../css/components/input.css" rel="stylesheet" />
+    <link href="../css/components/table.css" rel="stylesheet" />
+    <link href="../css/components/dialog.css" rel="stylesheet" />
+    <link href="../css/components/checkbox.css" rel="stylesheet" />
+    <link href="../css/layout/content.css" rel="stylesheet" />
+    <link href="../css/layout/header.css" rel="stylesheet" />
+    <link href="../css/layout/navbar.css" rel="stylesheet" />
+    <link href="../css/page/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar">
+        <div class="logo-box">
+            <div class="sidebar"></div>
+            <div class="logo"></div>
+        </div>
+        <div class="navbar-box">
+            <div class="navbar-item">
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Tổng quan</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-icon icon-report"></div>
+                <div class="navbar-text">Báo cáo</div>
+            </div>
+            <div class="navbar-item ">
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Mặt hàng</div>
+            </div>
+            <div class="navbar-item ">
+                <div class="navbar-icon icon-employee"></div>
+                <div class="navbar-text">Danh mục khách hàng</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-icon icon-setting"></div>
+                <div class="navbar-text">Thiết lập hệ thống</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Header-->
+
+    <div id="header">
+        <div class="slide">
+            <select name="restaurantName" class="restaurantName">
+                <option value="Nhà hàng Biển Đông">Nhà hàng Biển Đông</option>
+            </select>
+        </div>
+        <div class="user-info">
+            <div class="user-icon"></div>
+            <div class="user-name">Từ Minh Quý</div>
+            <div class="user-more"></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="page-title">
+            <div class="page-left">Danh sách khách hàng</div>
+            <div class="page-right">
+                <button class="btn-default btn-addcustomer">Thêm khách hàng</button>
+            </div>
+        </div>
+        <div class="toolbar">
+            <input type="text" class="input input-search" placeholder="Tìm kiếm theo mã, tên khách hàng" />
+            <button id="btn-refresh" class="btn-refresh"></button>
+        </div>
+        <div class="grid">
+            <table id="tbListCustomer" class="table" width="100%" border="0">
+                <thead>
+                    <tr>
+                        <th>Mã khách hàng</th>
+                        <th>Họ và tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>Nhóm khách hàng</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Số tiền nợ</th>
+                        <th>Đang hoạt động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="paging"></div>
+    </div>
+
+    <div class="dialog-hide dialog ">
+        <div class="model"></div>
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <div class="dialog-title">THÔNG TIN KHÁCH HÀNG</div>
+                <div class="dialog-closebtn"></div>
+            </div>
+            <div class="dialog-body">
+                <div class="body-top">
+                    <div class="body-avatar">
+                        <div class="img-avatar"></div>
+                        <div class="text-avatar">Vui lòng chọn ảnh có định dạng</div>
+                        <div class="kindtext-avatar">.jpg, .jpeg, .png, .gif.</div>
+                    </div>
+                    <div class="body-laberCusCode">
+                        <label for="customerCode">Mã khác hàng (*)</label> <br />
+                        <input id="customerCode" class="input-dialog" required /> <br />
+                        <label for="memberCardCode">Mã thẻ thành viên</label> <br />
+                        <input id="memberCardCode" class="input-dialog" /> <br />
+                        <label for="dateOfBirth">Ngày sinh</label> <br />
+                        <input type="date" id="dateOfBirth" class="input-dialog" placeholder="mm/dd/yyyy" />
+                    </div>
+
+                    <div class="body-laberCusName">
+                        <label for="fullName">Họ và tên (*)</label> <br />
+                        <input id="fullName" class="input-dialog" required /> <br />
+                        <label for="customerGroupName">Nhóm khách hàng</label> <br />
+                        <select name="customerGroupName" id="customerGroupName" class="input-dialog select-groupname">
+                            <option value="VIP">VIP</option>
+                            <option value="Nhóm khách hàng MISA">Nhóm khách hàng MISA</option>
+                        </select><br />
+                        <label for="genderName">Giới tính</label> <br />
+                        <div class="genderCheckbox">
+                            <input type="radio" name="gender" id="male" value="1">
+                            <label for="male">Nam</label>
+                            <input type="radio" name="gender" id="female" value="2">
+                            <label for="female">Nữ</label>
+                            <input type="radio" name="gender" id="other" value="0">
+                            <label for="other">Khác</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="body-bottom">
+                    <div class="bottom-top">
+                        <div>
+                            <label for="email">Email</label><br />
+                            <input id="email" class="input-dialog" placeholder="example@domain.com" />
+                        </div>
+                        <div>
+                            <label for="phoneNumber">Số điện thoại (*)</label><br />
+                            <input id="phoneNumber" class="input-dialog" required />
+                        </div>
+                    </div>
+
+                    <div class="bottom-mid">
+                        <div>
+                            <label for="companyName">Tên công ty</label><br />
+                            <input id="companyName" class="input-dialog" />
+                        </div>
+                        <div>
+                            <label for="taxCode">Mã số thuế</label><br />
+                            <input id="taxCode" class="input-dialog" />
+                        </div>
+                    </div>
+
+                    <div class="bottom-address">
+                        <div>
+                            <label for="address">Địa chỉ</label><br />
+                            <input id="address" class="input-dialog" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button id="btn-exit" class="btn-default">Hủy</button>
+                <button id="btn-save" class="save-paging btn-default">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+    <script src="../js/page/dialog.js"></script>
+    <script src="../js/page/table.js"></script>
+</body>
+</html>

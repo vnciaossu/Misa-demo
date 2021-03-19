@@ -1,0 +1,197 @@
+.dialog {
+}
+
+    .dialog .model {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 40%;
+    }
+
+    .dialog .dialog-content {
+        padding: 24px;
+        position: fixed;
+        top: calc(50% - 260px);
+        left: calc(50% - 325px);
+        width: 650px;
+        height: 520px;
+        border-radius: 4px;
+        background-color: #ffff;
+    }
+
+    .dialog .dialog-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .dialog .dialog-closebtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 0 4px 0 4px;
+        background-image: url('../../icon/x.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+        .dialog .dialog-closebtn:hover {
+            background-color: #bebebe;
+            cursor: pointer;
+        }
+
+.dialog-hide {
+    display: none;
+}
+
+.dialog-footer {
+    position: absolute;
+    border-radius: 0 0 5px 5px;
+    background-color: #e3e3e3;
+    height: 60px;
+    bottom: 0px;
+    width: 100%;
+    right: 0;
+    align-items: center;
+}
+
+    .dialog-footer #btn-exit {
+        position: absolute;
+        right: 124px;
+        top: calc(50% - 20px);
+        background-color: #e3e3e3;
+        color: black;
+        width: 90px;
+    }
+
+    .dialog-footer #btn-save {
+        position: absolute;
+        right: 24px;
+        top: calc(50% - 20px);
+        width: 90px;
+    }
+
+.dialog-body {
+    width: 100%;
+    height: 85%;
+}
+
+    .dialog-body .body-top {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        /* background-color: aqua; */
+    }
+
+    .dialog-body .body-bottom {
+        width: 100%;
+        height: 50%;
+        /* background-color: blue; */
+    }
+
+.body-avatar {
+}
+
+    .body-avatar .img-avatar {
+        cursor: pointer;
+        margin-top: 10px;
+        width: 160px;
+        height: 160px;
+        border-radius: 100px;
+        border: 1px solid #bebebe;
+        background-image: url('../../img/default-avatar.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .body-avatar .text-avatar {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .body-avatar .kindtext-avatar {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+.body-laberCusCode {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .body-laberCusCode > label {
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+.body-laberCusName {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .body-laberCusName > label {
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    .body-laberCusName .genderCheckbox {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+        .body-laberCusName .genderCheckbox > input {
+            height: 20px;
+            width: 20px;
+            background: red;
+        }
+
+        .body-laberCusName .genderCheckbox > label {
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+    .body-laberCusName .select-groupname {
+        width: 233px;
+        height: 36px;
+    }
+
+.body-bottom {
+}
+
+    .body-bottom .bottom-top {
+        display: flex;
+    }
+
+        .body-bottom .bottom-top #email {
+            width: 372px;
+            margin-right: 10px;
+        }
+
+    .body-bottom .bottom-mid {
+        display: flex;
+    }
+
+        .body-bottom .bottom-mid #companyName {
+            width: 372px;
+            margin-right: 10px;
+        }
+
+.bottom-address {
+}
+
+    .bottom-address #address {
+        width: 615px;
+    }
+
+.body-bottom > div {
+    margin-top: 12px;
+}
