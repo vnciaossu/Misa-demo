@@ -5,7 +5,6 @@
     $("#btn-refresh").click(function () {
         loadData();
     })
-
 })
 
 function loadData() {
@@ -40,9 +39,10 @@ function buildDataTableHTML(data) {
     $.each(data, function (index, customer) {
         var dateOfBirth = customer.DateOfBirth;
         var dateFormat = formatDateDDMMYY(dateOfBirth);
-        var demitMoney = '401545321321546';
+        var demitMoney = randomAmount();
         var money = formatMoney(demitMoney);
         var sex = formatSex(customer.Gender);
+        var checked = randomActive();
         var trHTML = `<tr>
                         <td>${customer.CustomerCode}</td>
                         <td>${customer.FullName}</td>
@@ -52,7 +52,7 @@ function buildDataTableHTML(data) {
                         <td>${customer.PhoneNumber}</td>
                         <td>${customer.Email}</td>
                         <td>${money}</td>
-                        <td><input type="checkbox" /?</td>
+                        <td><input type="checkbox" ${checked}/?</td>
                     </tr>`;
         $("table#tbListCustomer tbody").append(trHTML);
     })
@@ -81,4 +81,22 @@ function formatSex(sex) {
     } else if (sex == 1) {
         return "Nam";
     }
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomActive() {
+    var active = getRndInteger(1, 2);
+    if (active == 1) {
+        return "";
+    } else if (active == 2) {
+        return "Checked";
+    }
+}
+
+function randomAmount() {
+    var amount = getRndInteger(0, 100000);
+    return amount * getRndInteger(0, 100000);
 }
