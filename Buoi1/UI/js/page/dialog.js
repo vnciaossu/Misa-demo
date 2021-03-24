@@ -1,6 +1,4 @@
-﻿$(".dialog").ready(function () {
-    addEvent();
-})
+﻿addEvent();
 
 function addEvent() {
     $(".btn-addcustomer").click(function () {
@@ -11,11 +9,19 @@ function addEvent() {
         $(".dialog").addClass('dialog-hide');
     })
 
+    $("#btn-exit").click(function () {
+        $(".dialog").addClass('dialog-hide');
+    })
+
     $("#btn-save").click(function () {
         postData();
     })
-}
 
+    
+}
+/*
+ *
+ */
 function postData() {
     var customerCode = $("#customerCode").val();
     var fullName = $("#fullName").val();
@@ -67,6 +73,6 @@ function postData() {
     }).done(function (res) {
         alert("Thêm thành công");
     }).fail(function (res) {
-        alert("Thêm không thành công");
+        alert(res.responseText);
     })
 }

@@ -53,6 +53,7 @@
     background-size: auto;
     background-position: center;
     cursor: pointer;
+    background-color: #fff;
 }
 
     .btn-refresh:hover {
